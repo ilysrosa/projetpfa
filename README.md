@@ -1,5 +1,13 @@
 <<<<<<< HEAD
-# projetpfa
+# projetpfa Alexandre ZHU Thomas Richard
+
+Description : Jeu de type survival dodge game, semblables à The World's Hardest Game ou Evades.io. Dans cette v1, il n'y a qu'un seul niveau, vous avez 3 vies et devez traverser la map jusqu'à la sortie tout en evitant les projectiles rouges.
+
+Méthode de travail : Sous VM Linux d'Oracle VB, à deux en appel + partage d'écran + transfert de code.
+
+Difficultés rencontrées : Maitrîse de rect.ml pour les collisions, Bibliothèque GFX ( Render_text, Superpositions de surfaces ), Appels à Global, Nombreux constantes de position.
+
+Points appréciés : Structure ECS, Type tag et match de collisions..
 =======
 # Game
 
