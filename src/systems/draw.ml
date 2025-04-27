@@ -8,7 +8,7 @@ let init _ = ()
 let white = Gfx.color 255 255 255 255
 
 let update _dt el =
-  let Global.{window;ctx;font;_} = Global.get () in
+  let Global.{window;ctx;font;overlay;player;_} = Global.get () in
   let surface = Gfx.get_surface window in
   let ww, wh = Gfx.get_context_logical_size ctx in
   Gfx.set_color ctx white;
@@ -19,4 +19,6 @@ let update _dt el =
       let txt = e#texture#get in
       Texture.draw ctx surface pos box txt font
     ) el;
+  Texture.draw ctx surface (player#position#get) (player#box#get) (player#texture#get) font;
+  Texture.draw ctx surface (overlay#position#get) (overlay#box#get) (overlay#texture#get) font;
   Gfx.commit ctx

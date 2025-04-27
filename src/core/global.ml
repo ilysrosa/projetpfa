@@ -6,9 +6,8 @@ type t = {
   font : Gfx.font;
   overlay : overlay;
   player : player;
-  mutable entityNb : int;
+  mutable niveau : int;
   mutable time : float;
-  mutable health : int;
   mutable waiting : int;
 }
 

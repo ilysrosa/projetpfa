@@ -23,6 +23,18 @@ class texture () =
     method texture = r
   end
 
+class hp () =
+  let r = Component.init 0 in
+  object
+    method hp = r
+  end
+
+class target () =
+  let r = Component.init true in
+  object
+    method target = r
+  end
+
 (*class mass () =
   let r = Component.init 0.0 in
   object
@@ -79,13 +91,6 @@ class type movable =
     inherit velocity
   end
 
-class type spawnable =
-  object
-    inherit Entity.t
-    inherit position
-    inherit tagged
-  end
-
 (** Entités :
     Ici, dans inherit, on appelle les constructeurs pour qu'ils initialisent
     leur partie de l'objet, d'où la présence de l'argument ()
@@ -99,19 +104,11 @@ class player =
     inherit texture ()
     inherit resolver ()
     inherit velocity ()
+    inherit hp ()
+    inherit target ()
   end
 
 class wall () =
-  object
-    inherit Entity.t ()
-    inherit position ()
-    inherit box ()
-    inherit tagged ()
-    inherit texture ()
-    inherit resolver ()
-  end
-
-class platform () =
   object
     inherit Entity.t ()
     inherit position ()

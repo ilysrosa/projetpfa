@@ -7,6 +7,8 @@ type t = { width : int; height : int }
    https://en.wikipedia.org/wiki/Minkowski_addition#Collision_detection
 *)
 
+let zero = {width = 0; height = 0}
+
 let mdiff v1 r1 v2 r2 =
   let x = v1.x -. v2.x -. float r2.width in
   let y = v1.y -. v2.y -. float r2.height in
