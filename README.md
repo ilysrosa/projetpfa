@@ -8,6 +8,7 @@ Méthode de travail : Sous VM Linux d'Oracle VB, à deux en appel + partage d'é
 Difficultés rencontrées : Maitrîse de rect.ml pour les collisions, Bibliothèque GFX ( Render_text, Superpositions de surfaces ), Appels à Global, Nombreux constantes de position.
 
 Points appréciés : Structure ECS, Type tag et match de collisions..
+
 =======
 # Game
 
